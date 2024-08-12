@@ -1,0 +1,39 @@
+<odoo>
+    <record id="view_rental_transaction_tree" model="ir.ui.view">
+        <field name="name">rent.transaction.tree</field>
+        <field name="model">rent.transaction</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="tanggal_rental"/>
+                <field name="nama_peminjam"/>
+                <field name="status_transaksi"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_rental_transaction_form" model="ir.ui.view">
+        <field name="name">rent.transaction.form</field>
+        <field name="model">rent.transaction</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="tanggal_rental"/>
+                    <field name="nama_peminjam"/>
+                    <field name="status_transaksi"/>
+                    <field name="list_buku_id"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_rental_transactions" model="ir.actions.act_window">
+        <field name="name">Transaksi Rental</field>
+        <field name="res_model">rent.transaction</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Transaksi Rental
+            </p>
+        </field>
+    </record>
+</odoo>

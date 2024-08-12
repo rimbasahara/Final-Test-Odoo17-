@@ -1,0 +1,64 @@
+<odoo>
+    <record id="view_book_tree" model="ir.ui.view">
+        <field name="name">book.list.tree</field>
+        <field name="model">book.list</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="ref"/>
+                <field name="judul"/>
+                <field name="category"/>
+                <field name="tanggal_terbit"/>
+                <field name="kode_isbn"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_book_form" model="ir.ui.view">
+        <field name="name">book.list.form</field>
+        <field name="model">book.list</field>
+        <field name="arch" type="xml">
+            <form string="Book List Form">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="ref"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="judul"/>
+                        <field name="category"/>
+                        <field name="tanggal_terbit"/>
+                        <field name="penulis_ids"/>
+                        <field name="kode_isbn"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_book_search" model = "ir.ui.view">
+        <field name="name">book.list.search</field>
+        <field name="model">book.list</field>
+        <field name="arch" type="xml">
+            <search string="Search Book">
+                <group string="Group By">
+                    <filter name="tanggal_terbit" string="Tanggal Terbit" context="{'group_by':'judul'}"/>
+                </group>
+                <searchpanel>
+                    <field name="category" icon="oi-group" enable_counters="1"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+    <record id="book_action" model="ir.actions.act_window">
+        <field name="name">Buku</field>
+        <field name="res_model">book.list</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p name="o_view_nocontent_smiling_face">
+                Buat Buku Pertamamu ^_^
+            </p>
+        </field>
+    </record>
+</odoo>

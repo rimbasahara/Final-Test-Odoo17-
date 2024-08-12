@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_book_list,book.list,model_book_list,group_admin_buku,1,1,1,1
+access_library_member,library.member,model_library_member,group_admin_member,1,1,1,1
+access_rent_transaction,rent.transaction,model_rent_transaction,group_admin_rental,1,1,1,1
+access_book_list,book.list,model_book_list,group_admin_rental,1,0,0,0
+access_library_member,library.member,model_library_member,group_admin_rental,1,0,0,0

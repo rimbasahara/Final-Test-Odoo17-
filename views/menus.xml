@@ -1,0 +1,13 @@
+<odoo>
+    <menuitem id="menu_library_root" name="Book_Library"/>
+
+    <!-- Menu Buku -->
+    <menuitem id="menu_library_master" name="Master Buku" parent="menu_library_root" action="book_action"/>
+
+    <!-- Menu Member -->
+    <menuitem id="menu_library_member" name="Master Member" parent="menu_library_root" action="members_action"/>
+
+    <!-- Menu Transaksi Rental -->
+    <menuitem id="menu_library_transactions" name="Transaksi Rental" parent="menu_library_root" action="action_rental_transactions"/>
+
+</odoo>
